@@ -19,7 +19,7 @@ provider "aws" {
   }
 }
 
-resource "aws_instance" "hextris_server" {
+resource "aws_instance" "hextris-server" {
   ami = "ami-0d7a109bf30624c99"
   instance_type = "t2.micro"
   key_name = "vockey"
@@ -35,7 +35,7 @@ output "hextris-url" {
   value = aws_instance.hextris_server.public_ip
 }
 
-resource "aws_security_group" "hextris_server" {
+resource "aws_security_group" "hextris-server" {
   name = "hextris_server"
   description = "Hextris HTTP and SSH access"
 

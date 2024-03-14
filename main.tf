@@ -32,11 +32,11 @@ resource "aws_instance" "hextris-server" {
 }
 
 output "hextris-url" {
-  value = aws_instance.hextris_server.public_ip
+  value = aws_instance.hextris-server.public_ip
 }
 
 resource "aws_security_group" "hextris-server" {
-  name = "hextris_server"
+  name = "hextris-server"
   description = "Hextris HTTP and SSH access"
 
   ingress {
